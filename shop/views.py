@@ -23,3 +23,8 @@ def create_product(request):
             return HttpResponseRedirect('/')
         else:
             return HttpResponseBadRequest()
+
+
+def view_product(request, product_id):
+    product = Product.objects.filter(id=product_id)[0].__dict__
+    return render(request, 'product.html', {'product': product})
