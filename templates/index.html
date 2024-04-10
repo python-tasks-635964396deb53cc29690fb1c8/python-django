@@ -22,7 +22,12 @@
             <div class="search-panel">
                 <span id="filter">Всюду ↓</span>
                 <input type="hidden" name="filter" value="None">
+                {% if not prev %}
                 <input id="query" placeholder="Искать на Exos" type="text" name="query">
+                {% endif %}
+                {% if prev %}
+                <input id="query" placeholder="Искать на Exos" type="text" name="query" value="{{ prev }}">
+                {% endif %}
                 <input id="submit" type="submit" value="Искать">
             </div>
         </form>

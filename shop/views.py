@@ -28,3 +28,11 @@ def create_product(request):
 def view_product(request, product_id):
     product = Product.objects.filter(id=product_id)[0].__dict__
     return render(request, 'product.html', {'product': product})
+
+
+def search_product(request):
+    if (r := request.GET['filter']) and r != 'None':
+        products = Product.objects.filter(title__icontains=request.GET['query'], p_type=r)
+    else:
+        products = Product.objects.filter(title__icontains=request.GET['query'])
+    return render(request, 'index.html', {'products': products, 'prev': request.GET['query']})
