@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <title>Create Product</title>
     <link rel="icon" href="/static/logo.png">
+    <link rel="stylesheet" href="/static/css/create_products.css">
 </head>
 <body>
-<form method="POST" action="/products/create/">
-    {% csrf_token %}
-    <input type="text" placeholder="Title" name="title">
-    <input type="number" placeholder="Price" name="price">
-    <input type="text" placeholder="Image Link" name="image_link">
-    <input type="text" placeholder="Product Type" name="p_type">
-    <input type="submit">
-</form>
+<main>
+    <div class="preview">
+        <span id="product_title">Title</span>
+        <img id="product_image" alt="Preview">
+        <span id="product_price">Price RUB</span>
+    </div>
+    <form class="form" method="POST" action="/products/create/">
+        {% csrf_token %}
+        <input type="text" placeholder="Title" name="title">
+        <input type="number" placeholder="Price" name="price">
+        <input type="text" placeholder="Image Link" name="image_link">
+        <input type="text" placeholder="Product Type" name="p_type">
+        <input type="submit">
+    </form>
+</main>
+
+<script src="/static/js/script.js"></script>
+<script src="/static/js/create_products.js"></script>
 </body>
 </html>

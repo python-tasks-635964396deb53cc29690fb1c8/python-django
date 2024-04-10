@@ -1,0 +1,83 @@
+.popup-filter {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    align-content: start;
+    flex-wrap: wrap;
+    width: 50svw;
+    top: 3svh;
+    bottom: 3svh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: .5vw;
+    background: white;
+    box-shadow: 0 0 .3vw black;
+    border-radius: .3vw;
+    overflow-y: scroll;
+}
+
+.popup-filter span {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+    background: gray;
+    border-radius: .4vw;
+    margin: .2vw;
+    padding: .2vw;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    height: 100svh;
+}
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+.preview, .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50svw;
+}
+
+.preview {
+    padding: 5vw;
+}
+
+#product_title {
+    font-size: 1.7vw;
+    font-weight: bold;
+}
+
+.preview img {
+    width: 60%;
+    height: 70%;
+}
+
+#product_price {
+    color: green;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.form {
+}
+
+.form input[placeholder] {
+    margin: .3vw;
+    padding: .5vw;
+    font-size: 1.3vw;
+    width: 70%;
+}
+
+.form input[type='submit'] {
+    margin: .6vw;
+    font-size: 2vw;
+}

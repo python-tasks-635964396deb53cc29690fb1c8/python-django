@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, Http404
+from django.http import HttpResponseRedirect, HttpResponseBadRequest
 
 from shop.models import Product
 from shop.forms import ProductForm
@@ -22,4 +22,4 @@ def create_product(request):
             p.save()
             return HttpResponseRedirect('/')
         else:
-            return Http404()
+            return HttpResponseBadRequest()
