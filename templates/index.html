@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>EXOS — Интернет-магазин</title>
+    <link rel="icon" href="/static/logo.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/products.css">
 </head>
 <body>
 <div class="nav-panel">
     <div class="main-nav">
+        <a href="/products/create">Создать продукт</a>
         <a href="#">Мобильное приложение</a>
         <a href="#">Подарочные сертификаты</a>
         <a href="#">Помощь</a>
@@ -36,7 +38,7 @@
         <div class="products-list">
             {% for product in products %}
                 <div class="product">
-                    <img src="{{ product.image_link }}" alt="Product Image">
+                    <a href="/products/{{ product.id }}"><img src="{{ product.image_link }}" alt="Product Image"></a>
                     <span class="product-price">{{ product.price }}</span>
                     <span class="product-title">{{ product.title }}</span>
                 </div>

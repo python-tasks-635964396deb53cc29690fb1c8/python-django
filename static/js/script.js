@@ -3,7 +3,7 @@ const filterInp = document.querySelector("input[name='filter']");
 
 const filterList = [
     "Всюду", "Электроника", "Одежда", "Обувь", "Автотовары", "Мебель",
-    "Книги", "Музыка", "Видео"
+    "Книги", "Музыка", "Видео", "Продукты"
 ];
 
 filterBtn.addEventListener("click", e => {

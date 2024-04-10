@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Product</title>
+    <link rel="icon" href="/static/logo.png">
+</head>
+<body>
+<form method="POST" action="/products/create/">
+    {% csrf_token %}
+    <input type="text" placeholder="Title" name="title">
+    <input type="number" placeholder="Price" name="price">
+    <input type="text" placeholder="Image Link" name="image_link">
+    <input type="text" placeholder="Product Type" name="p_type">
+    <input type="submit">
+</form>
+</body>
+</html>
