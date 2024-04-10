@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    background: #f2f6f9;
+}
+
+.popup-filter {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    align-content: start;
+    flex-wrap: wrap;
+    width: 50svw;
+    top: 3svh;
+    bottom: 3svh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: .5vw;
+    background: white;
+    box-shadow: 0 0 .3vw black;
+    border-radius: .3vw;
+    overflow-y: scroll;
+}
+
+.popup-filter span {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+    background: gray;
+    border-radius: .4vw;
+    margin: .2vw;
+    padding: .2vw;
+    cursor: pointer;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: right;
+    padding: .2vw;
+    background: white;
+}
+
+.main-nav a {
+    display: inline;
+    margin: .4vw;
+    font-size: 1vw;
+    font-weight: bold;
+    color: gray;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.main-nav a:hover {
+    color: darkblue;
+    transition: .3s;
+}
+
+.sub-main-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    border-radius: 0 0 .6vw .6vw;
+}
+
+.logo {
+    color: blue;
+    font-weight: bolder;
+    font-size: 3.5vw;
+    font-family: "Noto Mono", "Roboto Light", sans-serif;
+    text-transform: uppercase;
+}
+
+.search-panel {
+    display: flex;
+    align-items: stretch;
+    border: .2vw solid blue;
+    border-radius: .3vw;
+}
+
+#filter {
+    align-self: center;
+    background: lightgray;
+    color: gray;
+    font-size: 1vw;
+    font-weight: bold;
+    width: 5vw;
+    padding: .3vw .7vw;
+    border-radius: .4vw;
+    cursor: pointer;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+
+#query {
+    font-size: 1.3vw;
+    padding: .5vw;
+    border: none;
+    width: 25svw;
+}
+
+#query:focus {
+    outline: none;
+    border: none;
+}
+
+#submit {
+    border: none;
+    background: blue;
+    color: white;
+    font-size: 1.1vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.manage-panel span {
+    font-size: 1.35vw;
+    margin: .5vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main {
+    margin: 1vw;
+    padding: .5vw;
+    background: white;
+    border-radius: .6vw;
+    min-height: 75svh;
+}
+
+main h2 {
+    margin: 0;
+    font-size: 2.3vw;
+}

@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>EXOS — Интернет-магазин</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/products.css">
 </head>
 <body>
-<h1>{{text}}</h1>
+<div class="nav-panel">
+    <div class="main-nav">
+        <a href="#">Мобильное приложение</a>
+        <a href="#">Подарочные сертификаты</a>
+        <a href="#">Помощь</a>
+        <a href="#">Пункты выдачи</a>
+    </div>
+    <div class="sub-main-nav">
+        <span class="logo">exos</span>
+        <form method="GET" action="/search">
+            <div class="search-panel">
+                <span id="filter">Всюду ↓</span>
+                <input type="hidden" name="filter" value="None">
+                <input id="query" placeholder="Искать на Exos" type="text" name="query">
+                <input id="submit" type="submit" value="Искать">
+            </div>
+        </form>
+        <div class="manage-panel">
+            <span>Войти</span>
+            <span>Заказы</span>
+            <span>Избранное</span>
+            <span>Корзина</span>
+        </div>
+    </div>
+    <main>
+        <h2>Специально для всего интернета:</h2>
+        <div class="products-list">
+            {% for product in products %}
+                <div class="product">
+                    <img src="{{ product.image_link }}" alt="Product Image">
+                    <span class="product-price">{{ product.price }}</span>
+                    <span class="product-title">{{ product.title }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+</div>
+
+<script src="/static/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 12.25vw;
+    margin: .5vw;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.product * {
+    display: block;
+}
+
+.product img {
+    width: 12vw;
+    height: 14vw;
+}
+
+.product-price {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: green;
+}
+
+.product-title {
+    max-width: 12.2vw;
+    font-size: 1.2vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
